@@ -9,7 +9,7 @@ set hive.exec.dynamic.partition.mode=nonstrict;
 set hive.txn.manager=org.apache.hadoop.hive.ql.lockmgr.DbTxnManager;
 
 ------------------------------------
---  HF_D_ADMISSION_SOURCE table creation
+--  HF_D_ADMISSION_SOURCE table creation... mike
 ------------------------------------
 DROP TABLE IF EXISTS d_admission_source_txt PURGE;
 CREATE TABLE d_admission_source_txt (
@@ -99,62 +99,6 @@ LOAD DATA LOCAL INPATH '/opt/data/input/cerner/HF_D_ADMISSION_TYPE.dat' INTO Tab
 INSERT OVERWRITE TABLE d_admission_type SELECT * FROM d_admission_type_txt;
 
 DROP TABLE IF EXISTS d_admission_type_txt PURGE;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
